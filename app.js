@@ -30,7 +30,7 @@
         //creating the scene of the animation, namely a container that contains all the elements to be animated
         //SCENES
         let scene = new ScrollMagic.Scene({
-            duration:  11000, // duration of the video (ms)
+            duration:  10000, // duration of the video (ms)
             triggerElement: intro,
             triggerHook: 0
         })
