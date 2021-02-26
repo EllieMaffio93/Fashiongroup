@@ -5,6 +5,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Assistant:wght@200&display=swap');
 
 body{
     font-family:sans-serif;
@@ -105,6 +106,10 @@ a.dot{
     z-index:0;
 }
 
+.assistant{
+    font-family: 'Assistant', sans-serif!important;
+}
+
 
 .slick-active a.dot{
  border-bottom:1px solid #fff;
@@ -118,17 +123,17 @@ div.slider-arrow {
 	margin-top: -18px; 
 	color:#fff;
 	line-height: 36px;
-	font-size: 50px;
+	font-size: 30px;
 	cursor: pointer;
 	z-index: 10;
 }
 
 div.slider-prev {
-    left:30px;
+    left:70px;
     
 }
 div.slider-next {
-    right:30px;
+    right:150px;
     
 }
 
