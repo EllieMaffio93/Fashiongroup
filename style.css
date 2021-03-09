@@ -357,3 +357,90 @@ header {
     clip: rect(0,0,0,0);
     border: 0;
   }
+
+    /*SLIDER TEAM*/
+
+    .El {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;}
+    
+      .El__wrapper {
+        display: flex;
+        width: 300vw;
+        height: 100vh;
+      }
+    
+      .El__slide {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        padding: 50px;
+        
+        /*&:nth-child(1) {
+          background-color: salmon;
+        }
+        &:nth-child(2) {
+          background-color: blue;
+        }
+        &:nth-child(3) {
+          background-color: orange;
+        }
+        &:nth-child(4) {
+          background-color: tomato;
+        }*/
+      }
+  
+    
+      .El__content {
+        width: 100%;
+      }
+      
+      .El__content-half{
+        width:50%;
+      }
+    
+      .El__title,
+      .El__subtitle {
+        position: relative;
+      }
+  
+      .El__title{
+        font-weight:bolder;
+      }
+    
+    
+    .intro{
+      height:30vh;
+    }
+    
+    .pen-container{
+      width:90%;
+      margin:0 auto;
+      padding-top:50px;
+    }
+  
+  
+    .ceo-image{
+      width:400px;
+      height:400px;
+      object-fit:cover;
+      margin-top:-180px;
+  
+    }
+  
+    .member-image{
+      width:200px;
+      height:200px;
+      object-fit:cover;
+      margin:0 auto;
+      margin-top:30px;
+    }
+  
+    .member-image-right{
+      width:200px;
+      height:200px;
+      object-fit:cover;
+      margin:0 auto;
+      margin-top:30px;
+    }

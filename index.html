@@ -84,6 +84,54 @@ crossorigin="anonymous">
           </span>
       </header>
 
+
+      <div class="intro">
+        <div class="pen-container">
+        <h1>The team</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        </div>
+        
+        <div id="el" class="El">
+          <div id="wrapper" class="El__wrapper">
+            <div class="El__slide">
+              <!--the boss-->
+              <div class="El__content">
+                <h1 class="El__title">CEO</h1>
+                <h2 class="El__subtitle">Ettore</h2>
+                <img class="ceo-image" src="img/ceo.jpg" alt="CEO">
+              </div>
+            </div>
+            <div class="El__slide">
+              <div class="El__content-half">
+                <h1 class="El__title">Member B</h1>
+                <h2 class="El__subtitle">Drew</h2>
+                <img class="member-image" src="img/ceo.jpg" alt="CEO">
+              </div>
+              <div class="El__content-half">
+                <h1 class="El__title c">Member C</h1>
+                <h2 class="El__subtitle sub-c">Drew</h2>
+                <img class="member-image-right" src="img/ceo.jpg" alt="CEO">
+              </div>
+            </div>
+            <div class="El__slide">
+              <div class="El__content-half">
+                <h1 class="El__title">Member D</h1>
+                <h2 class="El__subtitle">Larissa</h2>
+                <img class="member-image" src="img/ceo.jpg" alt="CEO">
+              </div>
+              <div class="El__content-half">
+                <h1 class="El__title c">Member E</h1>
+                <h2 class="El__subtitle sub-c">Larissa</h2>
+                <img class="member-image-right" src="img/ceo.jpg" alt="CEO">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="intro"></div>
+
+
     
 
     <!--video try-->
@@ -107,10 +155,10 @@ crossorigin="anonymous">
 <!--slickslider-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/slick-lightbox@0.2.10/dist/slick-lightbox.min.js"></script>
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js" integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A==" crossorigin="anonymous"></script>-->  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js" integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A==" crossorigin="anonymous"></script>
 
 <script>
     $(".hero").slick({
@@ -155,6 +203,66 @@ crossorigin="anonymous">
   });
 });
 </script>
+
+<!--team slider script-->
+
+<script>
+
+  const ease = window.Power4.easeInOut
+    const el = document.querySelector('#el')
+    const wrapper = document.querySelector('#wrapper')
+    const slides = el.querySelectorAll('.El__slide')
+    const amount = slides.length
+    const controller = new window.ScrollMagic.Controller()
+    const horizontalMovement = new window.TimelineMax()
+  
+    const controller2 = new window.ScrollMagic.Controller({
+      vertical: false
+    })
+  
+    horizontalMovement
+      .add([
+        window.TweenMax.to(wrapper, 1, { x: `-${(100 / amount) * (amount - 1)}%` })
+      ])
+  
+    new window.ScrollMagic.Scene({
+      triggerElement: el,
+      triggerHook: 'onLeave',
+      duration: `${amount * 100}%`
+    })
+      .setPin(el)
+      .setTween(horizontalMovement)
+      .addTo(controller)
+  
+    slides.forEach((item, index) => {
+      const title = item.querySelector('h1')
+      const titleright = item.querySelector('.c')
+      const subtitle = item.querySelector('h2')
+      const subtitleright = item.querySelector('.sub-c')
+      const image = item.querySelector('img')
+      const member = item.querySelector('.member-image')
+      const memberight = item.querySelector('.member-image-right')
+      const tween = new window.TimelineMax()
+  
+      tween
+        .fromTo(title, 1, { x: 0 }, { x: 500 }, 0)
+        .fromTo(titleright, 1, { x: 400 }, { x: 500 }, 0)
+        .fromTo(subtitle, 1, { x: 0 }, { x: 500 }, 0)
+        .fromTo(subtitleright, 1, { x: 400 }, { x: 500 }, 0)
+        .fromTo(image, 1, { x: 1000 }, { x: 1000 }, 0)
+        .fromTo(member, 1, { x: 0 }, { x: 500 }, 0)
+        .fromTo(memberight, 1, { x: 400 }, { x: 500 }, 0)
+  
+      new window.ScrollMagic.Scene({
+        triggerElement: item,
+        triggerHook: 1,
+        duration: '100%'
+      })
+        .setTween(tween)
+        .addTo(controller2)
+    })
+  </script>
+  
 
 
 
