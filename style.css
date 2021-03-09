@@ -435,6 +435,7 @@ header {
       object-fit:cover;
       margin:0 auto;
       margin-top:30px;
+      position:relative;
     }
   
     .member-image-right{
@@ -443,4 +444,106 @@ header {
       object-fit:cover;
       margin:0 auto;
       margin-top:30px;
+      position:relative;
     }
+
+
+/*another team section*/    
+
+.container-team-section{
+    width:70%;
+    margin:0 auto;
+    position:relative;
+    padding-top:30px;
+    padding-bottom:30px;
+    height:2000px;
+}
+
+.another-team-title{
+  text-align:center;
+}
+
+.another-team-text{
+  text-align:center;
+}
+
+.member1,
+.member2,
+.member3,
+.member4,
+.member5{
+  position:absolute;
+  width:calc((100vw - 80px)/24*4);
+  height:calc((80vw - 80px)/24*9);
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  
+  
+}
+
+.member2{
+  top:25%;
+  right:0;
+}
+
+.member3{
+  top:55%;
+  left:0;
+}
+
+.member4{
+  top:70%;
+  right:0;
+}
+
+.member5{
+  top:95%;
+  left:0;
+}
+
+.red{
+  color:#d92040;
+  font-weight:bolder;
+  font-size:75px;
+}
+
+.name-member-1{
+  position:absolute;
+  top:30%;
+  left:20%;
+  width:28%;
+}
+
+.name-member-2{
+  position:absolute;
+  top:45%;
+  right:20%;
+}
+
+.name-member-3{
+  position:absolute;
+  top:75%;
+  left:17%;
+}
+
+.name-member-4{
+  position:absolute;
+  top:90%;
+  right:20%;
+}
+
+.name-member-5{
+  position:absolute;
+  top:115%;
+  left:17%;
+}
+
+.name-block{
+  font-size:35px; 
+  color:#fff;
+  background-color:#111;
+  padding:7px;
+}
+
+
