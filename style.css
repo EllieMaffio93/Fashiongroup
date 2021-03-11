@@ -340,7 +340,7 @@ header {
     overflow: hidden;
     border-radius:0;
     background-color: #f5f5f5;
-    background-image: linear-gradient(to right, red, red);
+    background-image: linear-gradient(to right, #d92040, #d92040);
     background-repeat: no-repeat;
     background-size: 0 100%;
     
@@ -368,7 +368,7 @@ header {
       .El__wrapper {
         display: flex;
         width: 300vw;
-        height: 100vh;
+        height: 70vh;
       }
     
       .El__slide {
@@ -488,17 +488,17 @@ header {
 }
 
 .member3{
-  top:55%;
+  top:45%;
   left:0;
 }
 
 .member4{
-  top:70%;
+  top:65%;
   right:0;
 }
 
 .member5{
-  top:95%;
+  top:85%;
   left:0;
 }
 
@@ -510,33 +510,38 @@ header {
 
 .name-member-1{
   position:absolute;
-  top:30%;
+  top:15%;
   left:20%;
   width:28%;
+  z-index:999;
 }
 
 .name-member-2{
   position:absolute;
-  top:45%;
+  top:40%;
   right:20%;
+  z-index:999;
 }
 
 .name-member-3{
   position:absolute;
-  top:75%;
+  top:60%;
   left:17%;
+  z-index:999;
 }
 
 .name-member-4{
   position:absolute;
-  top:90%;
+  top:81%;
   right:20%;
+  z-index:999;
 }
 
 .name-member-5{
   position:absolute;
-  top:115%;
+  top:103%;
   left:17%;
+  z-index:999;
 }
 
 .name-block{
@@ -546,4 +551,53 @@ header {
   padding:7px;
 }
 
+.background{
+  color:#E0E0E0;
+  font-size:200px;
+  position:absolute;
+  top:20%;
+  right:10%;
+  z-index:-10;
+  width:80%;
+}
 
+.letter-t{
+  color:#E0E0E0;
+  font-size:160px;
+  font-weight:bolder;
+  position:absolute;
+  top:15%;
+  right:30%;
+}
+
+.letter-e{
+  color:#E0E0E0;
+  font-size:160px;
+  font-weight:bolder;
+  position:absolute;
+  top:36%;
+  right:70%;
+}
+
+.letter-a{
+  color:#E0E0E0;
+  font-size:160px;
+  font-weight:bolder;
+  position:absolute;
+  top:59%;
+  right:34%;
+}
+
+.letter-m{
+  color:#E0E0E0;
+  font-size:160px;
+  font-weight:bolder;
+  position:absolute;
+  top:81%;
+  right:64%;
+}
+
+
+.fade{
+  opacity:1;
+}
